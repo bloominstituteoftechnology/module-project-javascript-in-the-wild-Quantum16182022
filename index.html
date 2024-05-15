@@ -61,8 +61,9 @@
     // 🧠 Try using the ternary operator instead of a conditional statement when deciding what to return.
     // 🧠 So instead of doing `if ('foo') return 'bar' else return 'baz'` do `return 'foo' ? 'bar' : 'baz'`
     // 🧠 The above recommendations allow to write the whole function body in just two clean lines!
-    const headAndTail = () => {
-
+    const headAndTail = (array) => {
+      return array.length === 0 ? "This array is empty": [array[0], array.slice(1)];
+      
     }
 
     // 👉 CHALLENGE 3
@@ -74,9 +75,13 @@
     // devGreet(false, false) // should return "Hey, I am a backend dev and I am sad"
     // ❗ Notes
     // 🧠 Use ternary expressions to construct the string.
-    const devGreet = () => {
+    const devGreet = (isFrontend, isHappy) =>
+        `Hey, I am a ${isFrontend ? 'frontend' :
+         'backend'} dev and I am ${isHappy ? 'happy' : 'sad'}`;
+    
+      
 
-    }
+    
 
     // 👉 CHALLENGE 4
     // 🧠 The function recognize takes an object representing a user.
